@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.yuanbao.test0503lbs_amap1.MainActivity" >
+    
+    
+    <com.amap.api.maps.MapView
+		android:id="@+id/map"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent">
+    </com.amap.api.maps.MapView>
+
+    <LinearLayout 
+	    android:id="@+id/rl"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+	    android:orientation="horizontal">
+	    
+	    <Button 
+	        android:id="@+id/btn1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="方式1"
+	        android:onClick="locate1"/>
+	    <Button 
+	        android:id="@+id/btn2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="方式2"
+	        android:onClick="locate2"/>
+	    
+		<Button 
+	        android:id="@+id/btn3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="显示地理位置"
+	        android:onClick="locate3"/>
+
+<!-- 	<TextView
+	        android:id="@+id/tv_position"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@id/btn2"
+	        android:layout_gravity="top"
+	        android:text="hello_world" /> -->
+
+	</LinearLayout>
+	
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/rl">
+		<Button
+		    style="?android:attr/buttonStyleSmall"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="test1" 
+		    android:onClick="test1"/>
+		<Button
+		    style="?android:attr/buttonStyleSmall"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="test2" 
+		    android:onClick="test2"/>
+		<Button
+		    android:id="@+id/btn_locate_thread"
+		    style="?android:attr/buttonStyleSmall"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="子线程定位" 
+		    android:onClick="test3"/>
+		<Button
+		    android:id="@+id/btn_traceplay"
+		    style="?android:attr/buttonStyleSmall"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="轨迹播放" 
+		    android:onClick="test4"/>
+	    
+	</LinearLayout>
+	
+</RelativeLayout>
